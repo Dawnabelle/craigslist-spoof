@@ -1,4 +1,5 @@
 <div>
   <router-outlet></router-outlet>
+  <!-- <app-activities (clickSender)="viewListing($event)"></app-activities> -->
   <app-activities [childListing]="listings" (clickSender)="viewListing($event)"></app-activities>
 </div>

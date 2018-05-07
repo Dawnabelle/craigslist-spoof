@@ -1,15 +1,6 @@
-<div class="container-fluid">
-  <div class="well">
-    <ul>
-      <!-- <li *ngFor="let childListing of lisitings" (click)="clickSender(childListing)">{{lisiting.title}}</li> -->
-      <li *ngFor="let listing of childListing">{{listing.title}}</li>
-      <!-- <li>7 I'm a Guy Walking at mount tabor this morning (Ne)</li>
-      <li>Visiting on business, show me the city (Tualatin/portland)</li>
-      <li>BASEBALL (Vancouver)</li>
-      <li>BABY BOOMERS/Dances!!! (PDX /VANC)</li>
-      <li>BICYCLE PARTNERS NEEDED (HILSBORO)</li>
-      <li>Have you looked at tßhe weather?</li>
-      <li>PADDLERS WANTED FOR FUN DRAGON BOAT TEAM - NO EXPERIENCE REQUIRED (Waterfront)</li> -->
-    </ul>
+<div class="container-fluid" *ngFor="let listing of listings" (click)="goToListingPage(listing)">
+  <div class="panel-body">
+    <p>{{listing.title}}</p>
+
   </div>
 </div>
