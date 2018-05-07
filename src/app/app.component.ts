@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Listing } from './models/listing.model';
 
 @Component({
@@ -6,7 +6,7 @@ import { Listing } from './models/listing.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   listings: Listing[] = [
     new Listing('Im a Guy Walking at mount tabor this morning.', '(Ne)', '', 'Im a guy in his 30s heading out to the park this morning for a walk and seeing if anyone wants to join me? Im heading to mount tabor to walk around for a bit and spend my morning. Looking for a female no dudes, from Southern California visiting, white with dark features'),
     new Listing('Visiting on business, show me the city', '(Tualatin/portland)', '', 'I am male and will be in the portland area on business for the first full week in June and would like a fun couple to hang out with in the evenings and show me the fun places around the city. If you are interested I look forward to hearing from you.'),
@@ -21,6 +21,9 @@ export class AppComponent {
 
   viewListing(clickedListing){
     this.selectedListing = clickedListing;
+  }
+
+  ngOnInit() {
   }
 
 }
