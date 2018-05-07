@@ -8,14 +8,13 @@ import { Listing } from '../models/listing.model';
 })
 
 export class ActivitiesComponent implements OnInit {
- // @Input() childBeerList: Beer[];
- //  // @Output() clickSender = new EventEmitter();
- //  // @Output() clickAdd = new EventEmitter();
+  @Input() childListing: Listing[];
+  @Output() clickSender = new EventEmitter();
+  // @Output() clickAdd = new EventEmitter();
 
    constructor() { }
 
   ngOnInit() {
   }
-
 
 }
